@@ -3,12 +3,14 @@
  * @brief  Functions and data related to GPIO/ADC/DAC module.
  *         The module configures the chip outputs as:
  *
- *         I/O2 - Logic output
- *         I/O4 - Logic input
- *         I/O6 - Analog-to-digital converter (ADC) input
- *         I/O7 - Digital-to-analog converter (DAC) output
- *         I/O6 - System red led
- *         I/O7 - System green led
+ *         I/O0 - Logic output 0
+ *         I/O1 - Logic output 1
+ *         I/O2 - Logic input 0
+ *         I/O3 - Logic input 1
+ *         I/O4 - Analog-to-digital converter (ADC) input
+ *         I/O5 - Digital-to-analog converter (DAC) output
+ *         I/O6 - System green led
+ *         I/O7 - System red led
  *
  *******************************************************************************
  * COPYRIGHT(c) 2019 SensiEDGE
@@ -78,7 +80,6 @@ typedef enum {
     DAC_PIN,
 	LED_GREEN_PIN,
     LED_RED_PIN,
-	//LED_GREEN_PIN,
 
 } GpioAdcDac_pins_t;
 
