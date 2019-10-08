@@ -30,7 +30,7 @@
  ******************************************************************************/
 
 #include "gpiointerrupt.h"
-
+#include "em_cmu.h"
 #include "SeGpio.h"
 
 
@@ -52,6 +52,9 @@ static bool InterruptsInitFlag = false;
  */
 void SeGpio_configPin(const SeGpio_pin_t *pin, SeGpio_pinMode_t mode, bool initState)
 {
+    /* Configure GPIO pins */
+    CMU_ClockEnable(cmuClock_GPIO, true);
+
     GPIO_PinModeSet(pin->m_port, pin->m_pin, mode, initState);
 }
 
